@@ -8,8 +8,9 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="name">
+        <h1>grouphouz</h1>
+    </div>
     <div class="loginstatus">
-        <?php echo $_SESSION['username']; ?>
-            &nbsp;
         <a href="logout.php">logout</a>
     </div>

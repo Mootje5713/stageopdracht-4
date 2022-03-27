@@ -1,54 +1,47 @@
 <?php
     include "connection.php";
-    if (isset($_GET['bericht'])) {
-        $bericht = $_GET['bericht'];
-        $user_id = $_SESSION['user_id'];
-        $bericht = "INSERT INTO `message` (bericht, user_id)
-        VALUES('$bericht', '$user_id')";
-        $result = $conn->query($bericht);
+    if (isset($_POST['password'])) {
+        $password = $_POST['password'];
+        $query = "SELECT * FROM `groups` WHERE password =  '$password'";
+        $result=$conn->query($query);
         if ( $result === FALSE) {
-            echo "error" . $bericht . "<br />" . $conn->error;
-        } 
-    }
-
-    $query = "SELECT * FROM `message` WHERE user_id='".$_SESSION["user_id"]."' ORDER BY id DESC";
-    $result=$conn->query($query);
-    if ( $result === FALSE) {
-        echo "error" . $query . "<br />" . $conn->error;
-    } else {
-        if ($result->num_rows>0) {
-            while($row=$result->fetch_assoc())
-            {
-                $bericht[] = $row;
+            echo "error" . $query . "<br />" . $conn->error;
+        } else {
+            if ($result->num_rows>0) {
+                while($row=$result->fetch_assoc())
+                {
+                    $_SESSION['group_id'] = $row['id'];
+                    $_SESSION['grouppassword'] = $row['password'];
+                }
             }
         }
+        header("Location: login.php");
     }
-    $conn->close();
+
 ?>
 
-<?php
-    include "header.php";
-?>
-
-<div class="bericht">
-    <a href="addmessage.php">Voeg een bericht toe</a>
-    <h1>bericht</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel=stylesheet href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="name">
+    <h1>grouphouz</h1>
 </div>
+<form method="POST">
+    <p>Voer je groepswachtwoord in</p>
+    <input type="password" name="password" id="password">
+    <input type="submit" class="btn" name="submit" value="send">
+    <br>
+    nog geen groep <a href="addgroup.php">klik hier</a>
+</form>
 
-<?php if (!isset($bericht)): 
-    echo "<h3>Je hebt nog geen categorieen toegevoegd!!</h3>";  
-    else:
-?>
-<?php endif; ?>
 
-<?php foreach($bericht as $row): ?>
-    <ul>
-        <li>
-            <a href="bericht.php?id=<?php echo $row['id'] ?>">
-            <h2><?php echo $row['bericht']?></a></h2>
-        </li>
-    </ul>
-<?php endforeach ?>
 
 <?php
     include "footer.php";

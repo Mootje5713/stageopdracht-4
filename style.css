@@ -3,17 +3,22 @@
     justify-content: end;
 }
 
-.bericht > h1 {
+.message > h1 {
     height: 40px;
     display: flex;
     justify-content: center;
 }
 
-.bericht > a  {
+.message > a  {
     background-color: lightblue;
     height: 30px;
     display: flex;
     justify-content: flex-start;
+}
+
+.name > h1 {
+    display: flex;
+    justify-content: center;
 }
 
 .box > h1 {
