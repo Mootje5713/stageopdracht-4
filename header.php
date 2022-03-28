@@ -9,8 +9,15 @@
 </head>
 <body>
     <div class="name">
-        <h1>grouphouz</h1>
+    <?php if(isset($_SESSION['groupname'])): ?>
+        <h1>grouphouz: <?php echo $_SESSION['groupname'] ?> (<?php echo $_SESSION['grouppassword'] ?>) </h1>
+        <?php endif; ?>
     </div>
     <div class="loginstatus">
+    <?php if(isset($_SESSION['username'])): ?>
+    ingelogd als <?php echo $_SESSION['username']; ?> &nbsp;
+    <?php endif; ?>
+    <?php if(isset($_SESSION['groupname'])): ?>
         <a href="logout.php">logout</a>
+        <?php endif; ?>
     </div>

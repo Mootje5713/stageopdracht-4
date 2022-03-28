@@ -46,10 +46,7 @@
 ?>
 
 <div class="message">
-    <a href="addmessage.php">Voeg een bericht toe</a>
-    <?php echo "<h1>$groupname</h1>"; ?>
-    <h1>Je bent nu ingelogd als <?php echo $_SESSION['username']; ?>
-    </h1>
+    <a href="addmessage.php">Voeg een bericht toe</a>    
 </div>
 
 <?php if (!isset($users)): 

@@ -1,6 +1,9 @@
 .loginstatus {
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    background-color: lightblue;
+    height: 30px;
+    display: flex;
 }
 
 .message > h1 {
@@ -10,6 +13,13 @@
 }
 
 .message > a  {
+    background-color: lightblue;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.addgroup > a  {
     background-color: lightblue;
     height: 30px;
     display: flex;
