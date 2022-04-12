@@ -23,9 +23,6 @@
 
 <?php include "header.php"; ?>
 
-<div class="name">
-    <h1>grouphouz</h1>
-</div>
 <form method="POST">
     <p>Voer je groepswachtwoord in</p>
     <input type="password" name="password" id="password">
@@ -33,8 +30,6 @@
     <br>
     nog geen groep <a href="addgroup.php">klik hier</a>
 </form>
-
-
 
 <?php
     include "footer.php";

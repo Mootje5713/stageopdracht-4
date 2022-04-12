@@ -35,7 +35,9 @@
     $conn->close();
 ?>
 <?php include "header.php"; ?>
-<a href="login.php">Terug</a>
+<div class="loginstatus">
+    <a href="login.php">Terug</a>
+</div>
     <form action="" method="POST">
         username <input type="text" name="username" id="username" required>
         <br>

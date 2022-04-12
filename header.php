@@ -9,9 +9,11 @@
 </head>
 <body>
     <div class="name">
-    <?php if(isset($_SESSION['groupname'])): ?>
-        <h1>grouphouz: <?php echo $_SESSION['groupname'] ?> (<?php echo $_SESSION['grouppassword'] ?>) </h1>
+        <h1>grouphouz<?php if(isset($_SESSION['groupname'])): ?>:
+            <?php echo $_SESSION['groupname'] ?> 
+            (<?php echo $_SESSION['grouppassword'] ?>)
         <?php endif; ?>
+        </h1>
     </div>
     <div class="loginstatus">
     <?php if(isset($_SESSION['username'])): ?>
