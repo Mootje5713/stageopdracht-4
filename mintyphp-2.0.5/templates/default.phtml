@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base href="<?php
+
+use MintyPHP\Buffer;
+use MintyPHP\Router;
+
+ e(Router::getBaseUrl()); ?>">
+  <title>MintyPHP - <?php Buffer::get('title'); ?></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="css/default.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="header">
+      <?php $username = isset($_SESSION['user']) ? $_SESSION['user']['username'] : false ?>
+      <?php if ($username) : ?>
+        <a href="logout">Logout "<?php e($username); ?>"</a>
+      <?php else : ?>
+        <a href="login">Login</a>
+      <?php endif; ?>
+  </div>
+  <div class="body">
+    <?php Buffer::get('html'); ?>
+  </div>
+</body>
+
+</html>

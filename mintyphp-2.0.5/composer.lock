@@ -1,0 +1,127 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "efe5805744d5e9c5e1253495bf0a28ab",
+    "packages": [
+        {
+            "name": "mintyphp/core",
+            "version": "v2.5.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mintyphp/core.git",
+                "reference": "0528277eba97068a2460489b12dd9996c8ac1f13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mintyphp/core/zipball/0528277eba97068a2460489b12dd9996c8ac1f13",
+                "reference": "0528277eba97068a2460489b12dd9996c8ac1f13",
+                "shasum": ""
+            },
+            "require": {
+                "ext-memcache": "*",
+                "ext-mysqli": "*",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maurits van der Schee",
+                    "email": "maurits@vdschee.nl",
+                    "homepage": "https://www.tqdev.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/mintyphp/core/issues",
+                "source": "https://github.com/mintyphp/core/tree/v2.5.16"
+            },
+            "time": "2022-05-19T11:32:26+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "mintyphp/debugger",
+            "version": "v2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mintyphp/debugger.git",
+                "reference": "3f7768ebb6e153188fcb6c97e0a992575e2a4d4c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mintyphp/debugger/zipball/3f7768ebb6e153188fcb6c97e0a992575e2a4d4c",
+                "reference": "3f7768ebb6e153188fcb6c97e0a992575e2a4d4c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maurits van der Schee",
+                    "email": "maurits@vdschee.nl",
+                    "homepage": "https://www.tqdev.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/mintyphp/debugger/issues",
+                "source": "https://github.com/mintyphp/debugger/tree/v2.0.6"
+            },
+            "time": "2021-08-23T14:38:05+00:00"
+        },
+        {
+            "name": "mintyphp/tools",
+            "version": "v2.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mintyphp/tools.git",
+                "reference": "e5527c67adba2382dd5b6156592ca02b4f340eff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mintyphp/tools/zipball/e5527c67adba2382dd5b6156592ca02b4f340eff",
+                "reference": "e5527c67adba2382dd5b6156592ca02b4f340eff",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maurits van der Schee",
+                    "email": "maurits@vdschee.nl",
+                    "homepage": "https://www.tqdev.com"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/mintyphp/tools/issues",
+                "source": "https://github.com/mintyphp/tools/tree/v2.0.8"
+            },
+            "time": "2022-04-17T18:08:01+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
