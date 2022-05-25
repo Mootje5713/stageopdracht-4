@@ -1,0 +1,11 @@
+<?php foreach ($messages as $m) : ?>
+    <br>
+    <br>
+    <?php e($m['messages']['title']); ?>
+    <br>
+    <?php e($m['messages']['message']); ?>
+    <br>
+    <?php e($m['messages']['timestamp']); ?>
+<?php endforeach; ?>
+
+<?php include('includes/addmessageform.php');

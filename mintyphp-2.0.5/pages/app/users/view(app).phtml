@@ -1,0 +1,17 @@
+<a href="/app">Terug</a>
+<?php foreach ($users as $u) : ?>
+    <br>
+    <br>
+    <?php e($u['messages']['title']); ?>
+    <br>
+    <?php e($u['messages']['message']); ?>
+    <br>
+    <?php e($u['messages']['timestamp']); ?>
+<?php endforeach; ?>
+
+<?php if ($id == $_SESSION['user']['id']) : ?>
+    <p>Je kan je eigen berichten helaas niet zien</p>
+<?php endif; ?>
+<br>
+<br>
+<?php include('includes/addmessageform.php');

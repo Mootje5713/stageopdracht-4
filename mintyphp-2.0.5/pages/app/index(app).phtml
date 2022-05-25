@@ -1,7 +1,8 @@
+<p><a href="app/message/view/">addmessage</a></p>
 <h1>App</h1>
 <h2>Group: <?php e($group['groups']['name']); ?></h2>
 <p>Wachtwoord: <?php e($group['groups']['password']); ?></p>
 
 <?php foreach ($users as $u) : ?>
-  <a href="app/users/view/<?php e($u['users']['id']); ?>"><?php e($u['users']['username']); ?></a><br>
+  <a href=" app/users/view/<?php e($u['users']['id']); ?>"><?php e($u['users']['username']); ?></a><br>
 <?php endforeach; ?>
